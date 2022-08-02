@@ -7,15 +7,15 @@ import {
 } from "@chakra-ui/react";
 import * as React from "react";
 import { HiPencilAlt } from "react-icons/hi";
-import { CardContent } from "./CardContent";
-import { CardWithAvatar } from "./CardWithAvatar";
-import { UserInfo } from "./UserInfo";
+import { CardContent } from "../../../components/CardContent";
+import { CardWithAvatar } from "../../../components/CardWithAvatar";
+import { UserInfo } from "../../../components/UserInfo";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 
 const User: NextPage = (data) => {
-  console.log(data)
+  console.log(data);
   return (
     <div>
       <Head>
@@ -59,7 +59,7 @@ const User: NextPage = (data) => {
 export const getStaticProps: GetStaticProps = async (ctx) => {
   return {
     props: {
-      data: { name: "Ian", email: "ianbalijawa@gmail.com" },
+      data: { name: "Ian balijawa", email: "ianbalijawa@gmail.com" },
     },
   };
 };
