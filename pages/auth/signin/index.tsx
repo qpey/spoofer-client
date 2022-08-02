@@ -47,7 +47,8 @@ export default function Signin(data: any) {
                     size="lg"
                     mb="2"
                     fontWeight="extrabold"
-                    alignItems={"center"}
+                    // @ts-ignore
+                    align="center"
                   >
                     Welcome Back to spoofy
                   </Heading>
@@ -55,7 +56,7 @@ export default function Signin(data: any) {
                     fontSize="lg"
                     color={mode("gray.600", "gray.400")}
                     fontWeight="medium"
-                    alignItems={"center"}
+                    align="center"
                   >
                     Signin to Continue
                   </Text>
