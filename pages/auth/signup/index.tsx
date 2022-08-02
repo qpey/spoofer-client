@@ -48,7 +48,8 @@ export default function Signup(data: any) {
                     size="lg"
                     mb="2"
                     fontWeight="extrabold"
-                    alignItems={"center"}
+                    //@ts-ignore
+                    align="center"
                   >
                     welcome to spoofy
                   </Heading>
@@ -56,7 +57,7 @@ export default function Signup(data: any) {
                     fontSize="lg"
                     color={mode("gray.600", "gray.400")}
                     fontWeight="medium"
-                    alignItems={"center"}
+                    align="center"
                   >
                     Signup to get started
                   </Text>
