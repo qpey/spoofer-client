@@ -7,8 +7,8 @@ import {
   Input,
   Stack,
   useColorModeValue as mode,
-} from '@chakra-ui/react';
-import * as React from 'react';
+} from "@chakra-ui/react";
+import * as React from "react";
 
 export const SigupForm = () => {
   return (
@@ -18,35 +18,26 @@ export const SigupForm = () => {
         // your submit logic here
       }}
     >
-      <Stack spacing='4'>
-        <FormControl id='firstName'>
+      <Stack spacing="4">
+        <FormControl id="firstName">
           <FormLabel mb={1}>Firstname</FormLabel>
-          <Input autoComplete='firstName' />
+          <Input autoComplete="firstName" />
         </FormControl>
-        <FormControl id='lastName'>
+        <FormControl id="lastName">
           <FormLabel mb={1}>Lastname</FormLabel>
-          <Input autoComplete='lastName' />
+          <Input autoComplete="lastName" />
         </FormControl>
-        <FormControl id='email'>
+        <FormControl id="email">
           <FormLabel mb={1}>Email</FormLabel>
-          <Input type='email' autoComplete='email' />
+          <Input type="email" autoComplete="email" />
         </FormControl>
         <FormControl>
-          <Flex align='baseline' justify='space-between'>
+          <Flex align="baseline" justify="space-between">
             <FormLabel mb={1}>Password</FormLabel>
-            <Box
-              as='a'
-              href='#'
-              fontWeight='semibold'
-              fontSize='sm'
-              color={mode('blue.600', 'blue.200')}
-            >
-              Forgot Password?
-            </Box>
           </Flex>
-          <Input type='password' autoComplete='current-password' />
+          <Input type="password" autoComplete="current-password" />
         </FormControl>
-        <Button type='submit' colorScheme='blue' size='lg' fontSize='md'>
+        <Button type="submit" colorScheme="blue" size="lg" fontSize="md">
           Create my account
         </Button>
       </Stack>

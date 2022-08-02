@@ -7,8 +7,8 @@ import {
   Input,
   Stack,
   useColorModeValue as mode,
-} from '@chakra-ui/react';
-import * as React from 'react';
+} from "@chakra-ui/react";
+import * as React from "react";
 
 export const ForgotPasswordForm = () => {
   return (
@@ -18,25 +18,24 @@ export const ForgotPasswordForm = () => {
         // your submit logic here
       }}
     >
-      <Stack spacing='4'>
+      <Stack spacing="4">
         <FormControl>
           <Input
-            type='password'
-            autoComplete='off'
-            autoFill="off"
+            type="password"
+            autoComplete="off"
             autoFocus
-            placeholder='Enter new password'
+            placeholder="Enter new password"
             mb="5"
           />
         </FormControl>
         <FormControl>
           <Input
-            type='password'
-            autoComplete='off'
-            placeholder='Confirm new password'
+            type="password"
+            autoComplete="off"
+            placeholder="Confirm new password"
           />
         </FormControl>
-        <Button type='submit' colorScheme='blue' size='lg' fontSize='md'>
+        <Button type="submit" colorScheme="blue" size="lg" fontSize="md">
           Submit
         </Button>
       </Stack>
