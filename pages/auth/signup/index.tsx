@@ -4,13 +4,12 @@ import {
   Flex,
   Heading,
   SimpleGrid,
-  Stack,
   Text,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
 import * as React from "react";
-import { SigupForm } from "./SigupForm";
-import { Testimonial } from "./Testimonial";
+import { SigupForm } from "../../../components/auth/SigupForm";
+import { Testimonial } from "../../../components/auth/Testimonial";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { GetStaticProps } from "next";
@@ -49,7 +48,7 @@ const Signup: NextPage = (data) => {
                     size="lg"
                     mb="2"
                     fontWeight="extrabold"
-                    align="center"
+                    alignItems={"center"}
                   >
                     welcome to spoofy
                   </Heading>
@@ -57,7 +56,7 @@ const Signup: NextPage = (data) => {
                     fontSize="lg"
                     color={mode("gray.600", "gray.400")}
                     fontWeight="medium"
-                    align="center"
+                    alignItems={"center"}
                   >
                     Signup to get started
                   </Text>

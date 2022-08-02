@@ -1,16 +1,10 @@
 import {
   Box,
-  Button,
-  Flex,
-  Heading,
-  SimpleGrid,
-  Stack,
   Text,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
 import * as React from "react";
-import { ForgotPasswordForm } from "./ForgotPasswordForm";
-import { Testimonial } from "./Testimonial";
+import { ForgotPasswordForm } from "../../../components/auth/ForgotPasswordForm";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { GetStaticProps } from "next";

@@ -1,21 +1,19 @@
 import {
   Box,
-  Button,
   Flex,
   Heading,
   SimpleGrid,
-  Stack,
   Text,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
 import * as React from "react";
-import { SigninForm } from "./SigninForm";
-import { Testimonial } from "./Testimonial";
+import { SigninForm } from "../../../components/auth/SigninForm";
+import { Testimonial } from "../../../components/auth/Testimonial";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 
-const Signin: NextPage = (data) => {
+export default function Signin(data: any) {
   console.log(data);
   return (
     <div>
@@ -49,7 +47,7 @@ const Signin: NextPage = (data) => {
                     size="lg"
                     mb="2"
                     fontWeight="extrabold"
-                    align="center"
+                    alignItems={"center"}
                   >
                     Welcome Back to spoofy
                   </Heading>
@@ -57,7 +55,7 @@ const Signin: NextPage = (data) => {
                     fontSize="lg"
                     color={mode("gray.600", "gray.400")}
                     fontWeight="medium"
-                    align="center"
+                    alignItems={"center"}
                   >
                     Signin to Continue
                   </Text>
@@ -90,7 +88,7 @@ const Signin: NextPage = (data) => {
       </Box>
     </div>
   );
-};
+}
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   return {
@@ -99,5 +97,3 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     },
   };
 };
-
-export default Signin;
