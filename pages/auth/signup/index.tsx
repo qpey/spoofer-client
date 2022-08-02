@@ -14,7 +14,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 
-const Signup: NextPage = (data) => {
+export default function Signup(data: any) {
   console.log(data);
   return (
     <div>
@@ -89,7 +89,7 @@ const Signup: NextPage = (data) => {
       </Box>
     </div>
   );
-};
+}
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   return {
@@ -98,5 +98,3 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     },
   };
 };
-
-export default Signup;
