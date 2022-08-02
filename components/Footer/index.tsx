@@ -6,52 +6,52 @@ import {
   Stack,
   Text,
   useColorModeValue as mode,
-} from '@chakra-ui/react';
-import * as React from 'react';
-import { FaHeart } from 'react-icons/fa';
-import { SocialLink } from './SocialLink';
-import { links, socialLinks } from './_data';
-import { LinkGroup } from './LinkGroup';
-import { SubscribeForm } from './SubscribeForm';
+} from "@chakra-ui/react";
+import * as React from "react";
+import { FaHeart } from "react-icons/fa";
+import { SocialLink } from "./SocialLink";
+import { links, socialLinks } from "./_data";
+import { LinkGroup } from "./LinkGroup";
+import { SubscribeForm } from "./SubscribeForm";
 
 export const FooterContainer = () => (
-  <Box as='footer' bg={mode('gray.50', 'gray.800')}>
+  <Box as="footer" bg={mode("gray.50", "gray.800")}>
     <Box
       maxW={{
-        base: 'xl',
-        md: '7xl',
+        base: "xl",
+        md: "7xl",
       }}
-      mx='auto'
+      mx="auto"
       px={{
-        base: '6',
-        md: '8',
+        base: "6",
+        md: "8",
       }}
       py={{
-        base: '12',
-        md: '20',
+        base: "12",
+        md: "20",
       }}
     >
       <Flex
         direction={{
-          base: 'column',
-          lg: 'row',
+          base: "column",
+          lg: "row",
         }}
-        justify='space-between'
+        justify="space-between"
         mb={{
-          base: '10',
-          lg: '16',
+          base: "10",
+          lg: "16",
         }}
-        align='flex-start'
-        id='top'
+        align="flex-start"
+        id="top"
       >
         <SimpleGrid
-          flex='1'
+          flex="1"
           w={{
-            base: 'full',
-            lg: 'auto',
+            base: "full",
+            lg: "auto",
           }}
           maxW={{
-            lg: '2xl',
+            lg: "2xl",
           }}
           columns={{
             base: 1,
@@ -59,13 +59,13 @@ export const FooterContainer = () => (
             lg: 4,
           }}
           spacing={{
-            base: '12',
-            md: '10',
+            base: "12",
+            md: "10",
           }}
-          fontSize='sm'
+          fontSize="sm"
           marginEnd={{
-            md: '4',
-            lg: '16',
+            md: "4",
+            lg: "16",
           }}
         >
           {links.map((group, idx) => (
@@ -73,31 +73,31 @@ export const FooterContainer = () => (
           ))}
         </SimpleGrid>
         <Box
-          flex='2'
+          flex="2"
           maxW={{
-            lg: '420px',
+            lg: "420px",
           }}
           ml={{
-            lg: 'auto',
+            lg: "auto",
           }}
-          fontSize='sm'
+          fontSize="sm"
           mt={{
-            base: '12',
+            base: "12",
             lg: 0,
           }}
         >
           <Text
-            casing='uppercase'
+            casing="uppercase"
             mb={{
               base: 6,
               lg: 10,
             }}
-            fontWeight='bold'
-            letterSpacing='wide'
+            fontWeight="bold"
+            letterSpacing="wide"
           >
             Subscribe to our newsletter!
           </Text>
-          <Text lineHeight='tall'>
+          <Text lineHeight="tall">
             Get Overflow resources, curated content, and design inspiration
             delivered straight into your inbox. Be the first to learn the news
             about new features and product updates.
@@ -108,52 +108,52 @@ export const FooterContainer = () => (
 
       <Flex
         direction={{
-          base: 'column-reverse',
-          lg: 'row',
+          base: "column-reverse",
+          lg: "row",
         }}
         align={{
-          base: 'flex-start',
-          lg: 'center',
+          base: "flex-start",
+          lg: "center",
         }}
-        justify='space-between'
-        fontSize='sm'
+        justify="space-between"
+        fontSize="sm"
       >
         <Stack
           direction={{
-            base: 'column',
-            md: 'row',
+            base: "column",
+            md: "row",
           }}
           spacing={{
-            base: '4',
-            md: '12',
+            base: "4",
+            md: "12",
           }}
           mt={{
-            base: '8',
+            base: "8",
             lg: 0,
           }}
           w={{
-            base: 'full',
-            lg: 'auto',
+            base: "full",
+            lg: "auto",
           }}
           justify={{
-            base: 'space-between',
-            lg: 'flex-start',
+            base: "space-between",
+            lg: "flex-start",
           }}
           align={{
-            base: 'flex-start',
-            md: 'center',
+            base: "flex-start",
+            md: "center",
           }}
         >
           <HStack
-            spacing='2'
+            spacing="2"
             mt={{
-              lg: '8',
+              lg: "8",
             }}
-            as='ul'
-            listStyleType='none'
+            as="ul"
+            listStyleType="none"
           >
             {socialLinks.map((link, idx) => (
-              <Box as='li' key={idx}>
+              <Box as="li" key={idx}>
                 <SocialLink href={link.href}>
                   <Box srOnly>{link.label}</Box>
                   {link.icon}
@@ -163,10 +163,7 @@ export const FooterContainer = () => (
           </HStack>
         </Stack>
         <Box>
-          <Text>&copy; {new Date().getFullYear()} Envelope Inc</Text>
-          <Text mt='2'>
-            Made with <Heart /> by Chakra Inc.
-          </Text>
+          <Text>&copy; {new Date().getFullYear()} spoofy</Text>
         </Box>
       </Flex>
     </Box>
@@ -175,12 +172,12 @@ export const FooterContainer = () => (
 
 const Heart = () => (
   <Box
-    display='inline-block'
-    mx='1'
-    color={mode('blue.500', 'blue.300')}
-    fontSize='xs'
-    role='img'
-    aria-label='Love'
+    display="inline-block"
+    mx="1"
+    color={mode("blue.500", "blue.300")}
+    fontSize="xs"
+    role="img"
+    aria-label="Love"
     as={FaHeart}
   />
 );
