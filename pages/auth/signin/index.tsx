@@ -9,12 +9,10 @@ import {
 import * as React from "react";
 import { SigninForm } from "../../../components/auth/SigninForm";
 import { Testimonial } from "../../../components/auth/Testimonial";
-import type { NextPage } from "next";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 
 export default function Signin(data: any) {
-  console.log(data);
   return (
     <div>
       <Head>
@@ -90,11 +88,3 @@ export default function Signin(data: any) {
     </div>
   );
 }
-
-export const getStaticProps: GetStaticProps = async (ctx) => {
-  return {
-    props: {
-      data: { name: "Ian", email: "ianbalijawa@gmail.com" },
-    },
-  };
-};

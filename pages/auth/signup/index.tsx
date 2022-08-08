@@ -15,7 +15,6 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 
 export default function Signup(data: any) {
-  console.log(data);
   return (
     <div>
       <Head>
@@ -91,11 +90,3 @@ export default function Signup(data: any) {
     </div>
   );
 }
-
-export const getStaticProps: GetStaticProps = async (ctx) => {
-  return {
-    props: {
-      data: { name: "Ian", email: "ianbalijawa@gmail.com" },
-    },
-  };
-};

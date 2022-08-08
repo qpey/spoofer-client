@@ -11,13 +11,12 @@ import {
 import * as React from "react";
 
 export const ForgotPasswordForm = () => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  };
+
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        // your submit logic here
-      }}
-    >
+    <form onSubmit={handleSubmit}>
       <Stack spacing="4">
         <FormControl>
           <Input
