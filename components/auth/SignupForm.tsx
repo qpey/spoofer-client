@@ -9,13 +9,16 @@ import {
   useColorModeValue as mode,
 } from "@chakra-ui/react";
 import axios from "axios";
+import { useRouter } from "next/router";
 import * as React from "react";
 
-export const SigupForm = () => {
+export const SignupForm = () => {
   const [firstName, setFirstName] = React.useState("");
   const [lastName, setLastName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+
+  const router = useRouter();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -31,6 +34,12 @@ export const SigupForm = () => {
       );
       const data = response.data;
       console.log(data);
+
+      if (!localStorage.getItem("user")) {
+        localStorage.setItem("user", data.user);
+      }
+
+      router.push("/auth/user");
     } catch (error) {
       console.error(error);
     }

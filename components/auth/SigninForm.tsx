@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Flex,
   FormControl,
@@ -9,12 +8,15 @@ import {
   useColorModeValue as mode,
 } from "@chakra-ui/react";
 import * as React from "react";
-import Link from "next/link";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 export const SigninForm = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [error, setError] = React.useState("");
+
+  const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -27,9 +29,15 @@ export const SigninForm = () => {
         const {
           data: { data },
         } = res;
-        console.log(data);
+        if (!localStorage.getItem("user")) {
+          localStorage.setItem("user", JSON.stringify(data));
+        }
+        router.push("/auth/user");
       })
-      .catch((error) => console.error(error.response));
+      .catch((error) => {
+        console.error(error.response);
+        setError(error.message);
+      });
   };
 
   return (
@@ -46,15 +54,6 @@ export const SigninForm = () => {
         <FormControl>
           <Flex align="baseline" justify="space-between">
             <FormLabel mb={1}>Password</FormLabel>
-
-            <Box
-              as="a"
-              fontWeight="semibold"
-              fontSize="sm"
-              color={mode("blue.600", "blue.200")}
-            >
-              <Link href="/auth/forgot-password">Forgot Password?</Link>
-            </Box>
           </Flex>
           <Input
             type="password"

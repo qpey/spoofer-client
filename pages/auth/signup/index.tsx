@@ -8,7 +8,7 @@ import {
   useColorModeValue as mode,
 } from "@chakra-ui/react";
 import * as React from "react";
-import { SigupForm } from "../../../components/auth/SigupForm";
+import { SignupForm } from "../../../components/auth/SignupForm";
 import { Testimonial } from "../../../components/auth/Testimonial";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -61,7 +61,7 @@ export default function Signup(data: any) {
                     Signup to get started
                   </Text>
                 </Box>
-                <SigupForm />
+                <SignupForm />
               </Box>
 
               <Text mt="8" align="center" fontWeight="medium">
