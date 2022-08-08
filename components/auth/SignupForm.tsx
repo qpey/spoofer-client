@@ -38,7 +38,7 @@ export const SignupForm = () => {
       if (!localStorage.getItem("user")) {
         localStorage.setItem("user", data.user);
       }
-
+ 
       router.push("/auth/user");
     } catch (error) {
       console.error(error);

@@ -29,9 +29,9 @@ export const SigninForm = () => {
         const {
           data: { data },
         } = res;
-        if (!localStorage.getItem("user")) {
+        if (!localStorage.getItem("user"))
           localStorage.setItem("user", JSON.stringify(data));
-        }
+
         router.push("/auth/user");
       })
       .catch((error) => {
